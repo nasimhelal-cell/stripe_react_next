@@ -26,10 +26,8 @@ export function CartDrawer({
   onRemoveItem,
   onClearCart,
 }: CartDrawerProps) {
-  if (!isOpen) return null;
-
   const [loading, setLoading] = useState(false)
-
+  if (!isOpen) return null;
 
   const handleCheckout = async () => {
     setLoading(true)
@@ -47,6 +45,7 @@ export function CartDrawer({
       setLoading(false)
     } else {
       alert("Something went wrong with checkout.");
+      setLoading(true)
     }
 
 
