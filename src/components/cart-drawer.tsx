@@ -26,9 +26,9 @@ export function CartDrawer({
   onRemoveItem,
   onClearCart,
 }: CartDrawerProps) {
-  if (!isOpen) return null;
-
+  
   const [loading, setLoading] = useState(false)
+  if (!isOpen) return null;
 
 
   const handleCheckout = async () => {
