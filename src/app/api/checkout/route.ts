@@ -25,8 +25,8 @@ export async function POST(req: Request) {
                 },
                 quantity: item.quantity,
             })),
-            success_url: "http://localhost:3000/success",
-            cancel_url: "http://localhost:3000/cancel",
+            success_url: "/success",
+            cancel_url: "/cancel",
         });
 
         return NextResponse.json({ id: session.id });
